@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-    {% for transacao in transacoes %}
-        <h3>Conta de origem: {{ transacao.conta_origem }}</h3>
-    {% endfor %}
-</body>
-</html>
+{% extends "banco/base.html" %}
+
+{% block title %}
+    <title>Conta - Banco {{ conta.banco }}</title>
+{% endblock title %}
+
+{% block content %}
+    <h1></h1>
+{% endblock content %}

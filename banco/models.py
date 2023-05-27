@@ -12,17 +12,20 @@ class Conta(models.Model):
                         1 -> individual
                         2 -> conjunta
             transacoes (list): lista de transações realizadas pela conta
+            banco (str): banco no qual a conta está associada
     '''
-    id = models.CharField(max_length=10)
+    id = models.CharField(max_length=10, primary_key=True)
     titular = models.CharField(max_length=70)
     tipo = models.IntegerField()
     transacoes = []
+    banco = models.CharField(max_length=5)
     
     def __init__(self, titular, tipo):
         self.id = "ABC" + str(randint(0000000, 9999999))
         self.titular = titular
         if (tipo == 1 or tipo == 2):
             self.tipo = tipo
+        self.banco = "A"
 
     def __str__(self):
         return self.id

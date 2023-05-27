@@ -10,6 +10,7 @@ def login(request):
 def conta(request):
     context = {
         # fazer conexão da lista de transações de uma conta
-        'transacoes': 123
+        'transacoes': 123,
+        'conta': "A"
     }
-    return render(request, 'banco/conta.html')
+    return render(request, 'banco/conta.html', context)
