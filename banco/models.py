@@ -17,6 +17,7 @@ class Conta(models.Model):
     id = models.CharField(max_length=10, primary_key=True)
     titular = models.CharField(max_length=70)
     tipo = models.IntegerField()
+    saldo = models.FloatField()
     transacoes = []
     banco = models.CharField(max_length=5)
     
