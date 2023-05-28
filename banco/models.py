@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 from random import randint
 
 class Conta(models.Model):
@@ -11,6 +12,7 @@ class Conta(models.Model):
             tipo (int): tipo da conta
                         1 -> individual
                         2 -> conjunta
+            saldo (float): valor disponível na conta
             transacoes (list): lista de transações realizadas pela conta
             banco (str): banco no qual a conta está associada
     '''
@@ -44,7 +46,7 @@ class Transacao(models.Model):
     conta_origem = models.CharField(max_length=10)
     conta_destino = models.CharField(max_length=10)
     valor = models.IntegerField()
-    data_hora = models.DateTimeField()
+    data_hora = models.DateTimeField(default=timezone.now)
     
     def __init__(self, conta_origem, conta_destino, valor, data_hora):
         self.conta_origem = conta_origem
