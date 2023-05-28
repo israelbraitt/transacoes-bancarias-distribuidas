@@ -24,7 +24,8 @@
     justify-content: space-around;
     align-items: center;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    background: #39277a;
+    background: #0f0a5e;
+    background: linear-gradient(90deg, rgba(15,10,94,1) 0%, rgba(24,55,145,1) 49%, rgba(25,84,180,1) 100%); 
     height: 8vh;
   }
   
@@ -40,8 +41,8 @@
   }
   
   .nav-list li {
-    letter-spacing: 3px;
     margin-left: 32px;
+    margin-top: 10px;
   }
   
   .mobile-menu {

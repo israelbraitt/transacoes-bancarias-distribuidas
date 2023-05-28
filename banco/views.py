@@ -5,7 +5,7 @@ def home(request):
     return render(request, 'banco/home.html')
 
 def login(request):
-    return render(request, 'banco/home.html')
+    return render(request, 'banco/login.html')
 
 def conta(request):
     context = {
