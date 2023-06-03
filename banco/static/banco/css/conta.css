@@ -15,31 +15,32 @@ body {
     background-color: #fff;
 }
 
-.form_login {
+.form_transacao {
     display: flex;
     flex-direction: column;
     background-color: #fdfdfd;
     border-radius: 7px;
     padding: 40px;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-    gap: 5px
+    gap: 5px;
+    width: 50%
 }
 
-.form_login h1 {
+.form_transacao h1 {
     padding: 0;
     margin: 0;
     font-weight: 500;
     font-size: 1.6em;
 }
 
-.form_login p {
+.form_transacao p {
     display: inline-block;
     font-size: 14px;
     color: #666;
     margin-bottom: 25px;
 }
 
-.form_login input {
+.form_transacao input {
     padding: 15px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -50,16 +51,16 @@ body {
     outline: none;
 }
 
-.form_login input:focus {
+.form_transacao input:focus {
     border: 1px solid #1954b4;
 }
 
-.form_login label {
+.form_transacao label {
     font-size: 14px;
     font-weight: 600;
 }
 
-.form_login a {
+.form_transacao a {
     display: inline-block;
     margin-bottom: 20px;
     font-size: 13px;
@@ -67,11 +68,11 @@ body {
     transition: all linear 160ms;
 }
 
-.form_login a:hover {
+.form_transacao a:hover {
     color: #0f0a5e;
 }
 
-.btn_login {
+.btn_transacao {
     background: #1954b4;
     color: #fff;
     font-size: 14px;
@@ -83,7 +84,7 @@ body {
     cursor: pointer;
 }
 
-.btn_login:hover {
+.btn_transacao:hover {
     transform: scale(1.05);
     background-color: #0f0a5e;
 }
