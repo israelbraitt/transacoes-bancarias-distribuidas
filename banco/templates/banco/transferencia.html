@@ -1,0 +1,30 @@
+{% extends "banco/base.html" %}
+{% load static %}
+
+{% block head %}
+    <title>Conta - Banco {{ conta.banco }}</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'banco/css/transferencia.css' %}">
+{% endblock head %}
+
+{% block content %}
+    <div class="page">
+        <form action="{% url 'conta' %}" method="POST" class="form_transacao">
+            {% csrf_token %}
+            <h1>Transação</h1>
+            <p>Digite os seus dados da transação.</p>
+            <label for="conta_origem">Conta de origem</label>
+            <input type="text" id="conta_origem" name="conta_origem" value="{{ conta_origem }}" placeholder="Digite o código da conta" autofocus="true"/>
+            <label for="conta_destino">Conta destino</label>
+            <input type="text" id="conta_destino" name="conta_destino"  value="{{ conta_destino }}" placeholder="Digite o código da conta" autofocus="true"/>
+            <label for="valor">Valor da transação</label>
+            <input type="text" id="valor" name="valor" value="{{ valor }}"  placeholder="Digite o valor da transação" autofocus="true"/>
+            {{ erros.valor }}
+            <a href="/">Esqueci minha senha</a>
+            <button type="submit" class="btn_transacao"/>Efetuar transação</button>
+            {% if mensagem %}
+                {{ mensagem }}
+            {% endif %}
+        </form>
+    </div>
+{% endblock content %}

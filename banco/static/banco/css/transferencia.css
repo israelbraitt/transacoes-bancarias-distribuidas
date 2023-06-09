@@ -15,41 +15,52 @@ body {
     background-color: #fff;
 }
 
-.infos {
+.form_transacao {
     display: flex;
     flex-direction: column;
     background-color: #fdfdfd;
     border-radius: 7px;
     padding: 40px;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-    width: 40%
+    gap: 5px;
+    width: 50%
 }
 
-table {
-    justify-content: left;
-}
-
-table td {
-    width: 20%;
-    padding-right: 0;
-    margin-right: 0;
-    padding-bottom: 20px;
-}
-
-table h3 {
+.form_transacao h1 {
     padding: 0;
     margin: 0;
     font-weight: 500;
-    font-size: 1em;
+    font-size: 1.6em;
 }
 
-table p {
+.form_transacao p {
     display: inline-block;
     font-size: 14px;
     color: #666;
+    margin-bottom: 25px;
 }
 
-a {
+.form_transacao input {
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    margin-top: 3px;
+    border-radius: 4px;
+    transition: all linear 160ms;
+    outline: none;
+}
+
+.form_transacao input:focus {
+    border: 1px solid #1954b4;
+}
+
+.form_transacao label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form_transacao a {
     display: inline-block;
     margin-bottom: 20px;
     font-size: 13px;
@@ -57,25 +68,23 @@ a {
     transition: all linear 160ms;
 }
 
-a:hover {
-    transform: scale(1.05);
+.form_transacao a:hover {
     color: #0f0a5e;
 }
 
-.btn_iniciar_transacao {
+.btn_transacao {
     background: #1954b4;
     color: #fff;
     font-size: 14px;
     font-weight: 600;
     border: none !important;
     padding: 12px;
-    margin-top: 10px;
     border-radius: 10px;
     transition: all linear 160ms;
     cursor: pointer;
 }
-    
-.btn_iniciar_transacao:hover {
+
+.btn_transacao:hover {
     transform: scale(1.05);
     background-color: #0f0a5e;
 }

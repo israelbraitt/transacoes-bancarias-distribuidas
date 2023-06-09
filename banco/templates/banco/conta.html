@@ -1,6 +1,7 @@
 {% extends "banco/base.html" %}
 {% load static %}
 
+
 {% block head %}
     <title>Conta - Banco {{ conta.banco }}</title>
 
@@ -9,17 +10,34 @@
 
 {% block content %}
     <div class="page">
-        <form method="POST" class="form_transacao">
-            <h1>Transação</h1>
-            <p>Digite os seus dados da transação.</p>
-            <label for="conta_origem">Conta de origem</label>
-            <input type="conta_origem" placeholder="Digite o código da conta" autofocus="true"/>
-            <label for="conta_destino">Conta destino</label>
-            <input type="conta_destino" placeholder="Digite o código da conta" autofocus="true"/>
-            <label for="valor">Valor da transação</label>
-            <input type="valor" placeholder="Digite o valor da transação" autofocus="true"/>
-            <a href="/">Esqueci minha senha</a>
-            <button type="submit" class="btn_transacao"/>Efetuar transação</button>
-        </form>
+        <div class="infos">
+            <table>
+                <tr>
+                    <td>
+                        <h3>ID: </h3>
+                    </td>
+                    <td>
+                        <p>{{ conta.id }}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Titular(es): </h3>
+                    </td>
+                    <td>
+                        <p>{{ conta.titular }}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Saldo: </h3>
+                    </td>
+                    <td>
+                        <p>{{ conta.saldo }}</p>
+                    </td>
+                </tr>
+            </table>
+            <button class="btn_iniciar_transacao"/>Iniciar transação</button>
+        </div>
     </div>
 {% endblock content %}
