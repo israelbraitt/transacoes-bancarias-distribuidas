@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from random import randint
+import calendar, time
 
 class Conta(models.Model):
     '''
@@ -43,13 +44,21 @@ class Transacao(models.Model):
             valor (int): valor da transferência realizada
             data_hora (datetime): data e hora da transação
     '''
+    banco_inicial = models.IntegerField(default=100)
+    banco_origem = models.IntegerField(default=100)
+    banco_destino = models.IntegerField(default=100)
     conta_origem = models.CharField(max_length=10)
     conta_destino = models.CharField(max_length=10)
-    valor = models.IntegerField()
-    data_hora = models.DateTimeField(default=timezone.now)
-    
-    def __init__(self, conta_origem, conta_destino, valor, data_hora):
+    valor = models.FloatField(default=0.1)
+    timestamp = models.IntegerField(default=1)
+
+    '''
+    def __init__(self, banco_inicial, banco_origem, banco_destino, conta_origem, conta_destino, valor, timestamp):
+        self.banco_inicial = banco_inicial
+        self.banco_origem = banco_origem
+        self.banco_destino = banco_destino
         self.conta_origem = conta_origem
         self.conta_destino = conta_destino
         self.valor = valor
-        self.data_hora = data_hora
+        self.timestamp = timestamp
+    '''

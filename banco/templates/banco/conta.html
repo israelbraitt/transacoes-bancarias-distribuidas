@@ -17,7 +17,7 @@
                         <h3>ID: </h3>
                     </td>
                     <td>
-                        <p>{{ conta.id }}</p>
+                        <p>{{ id }}</p>
                     </td>
                 </tr>
                 <tr>
@@ -25,7 +25,7 @@
                         <h3>Titular(es): </h3>
                     </td>
                     <td>
-                        <p>{{ conta.titular }}</p>
+                        <p>{{ titular }}</p>
                     </td>
                 </tr>
                 <tr>
@@ -33,11 +33,11 @@
                         <h3>Saldo: </h3>
                     </td>
                     <td>
-                        <p>{{ conta.saldo }}</p>
+                        <p>{{ saldo }}</p>
                     </td>
                 </tr>
             </table>
-            <button class="btn_iniciar_transacao"/>Iniciar transação</button>
+            <button onclick="window.location.href='{% url 'transferencia' %}'" class="btn_iniciar_transacao"/>Iniciar transação</button>
         </div>
     </div>
 {% endblock content %}

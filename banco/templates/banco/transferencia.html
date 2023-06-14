@@ -9,7 +9,7 @@
 
 {% block content %}
     <div class="page">
-        <form action="{% url 'conta' %}" method="POST" class="form_transacao">
+        <form action="{% url 'efetuar' %}" method="POST" class="form_transacao">
             {% csrf_token %}
             <h1>Transação</h1>
             <p>Digite os seus dados da transação.</p>
