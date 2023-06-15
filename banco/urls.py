@@ -6,5 +6,6 @@ urlpatterns = [
     path('conta', views.conta, name="conta"),
     path('transferencia', views.form_transferencia, name="transferencia"),
     path('efetuar_transferencia', views.efetuar_transferencia, name="efetuar"),
-    path('notificar', views.notificar, name="notificar")
+    path('notificar', views.notificar, name="notificar"),
+    path('inserir_conta', views.inserir_conta, name="inserir_conta")
 ]

@@ -17,7 +17,21 @@ class Transacao():
         self.valor = valor
         self.timestamp = timestamp
 
-accs = {}
+class Conta():
+    def __init__(self, id, titular, saldo):
+        self.id = id
+        self.titular = titular
+        self.saldo = saldo
+        self.last_transfer = 0
+    def cancel(self):
+        self.saldo += self.last_transfer
+        self.last_transfer = 0
+    def transfer(self, valor):
+        self.saldo += valor
+        self.last_transfer = valor
+
+accs = {"164": Conta("164", "Gui", 30.0), "10": Conta("10", "Hi", 78.5), "110": Conta("110", "George", 110.1)}
+last_acc = None
 transactions = []
-my_port = "http://localhost:8000/notificar"
-banco_ports = {"164": "http://localhost:8000/notificar", "649": "http://localhost:8000/notificar", "114": "http://localhost:8000/notificar"}
+my_port = 'http://172.16.103.8:8008/notificar'
+banco_ports = {'7': 'http://172.16.103.7:8007/notificar', '5': 'http://172.16.103.5:8005/notificar', '8': 'http://172.16.103.8:8008/notificar'}
